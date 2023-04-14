@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#5b8efb">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- End Meta Tag -->
+    
+    <!-- Title -->
+    <title>Recruitment Form</title>
+    <!-- End Title -->
+    
+    <!-- ICON -->
+    <link rel="icon" href="https://cdn.neuronworks.co.id/v0.3.8/assets/img/logo/default.ico">
+    <link rel="shortcut icon" href="https://cdn.neuronworks.co.id/v0.3.8/assets/img/logo/default.ico" type="image/x-icon">
+    <!-- END ICON -->
+    
+    <!-- Notiflix -->
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/notiflix/minified/notiflix-2.0.0.min.css">
+    <!-- End Notiflix -->
+    
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/select2-bootstrap-theme-master/select2-bootstrap.min.css">
+    <!-- End Select 2 -->
+    
+    <!-- Smart Wizard -->
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/smartwizard/css/smart_wizard_all.min.css">
+    <!-- End Smart Wizard -->
+    
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/dropzone/dropzone.min.css">
+    <!-- End Dropzone -->
+    
+    <!-- Datatable -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"> -->
+    <!-- End datatable -->
+    
+    <!-- Air Datepicker -->
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/air-datepicker/css/datepicker.min.css">
+    <!-- End Air Datepicker -->
+    
+    <!-- Anno -->
+    <link rel="stylesheet" href="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/plugins/anno/anno.css">
+    <!-- End Anno -->
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2
+
+</style>
+
+ 
+</head>
+<body class="basic-theme blue font-default">
+    <div  class="d-flex flex-column height-auto" style="width: 100%;height: 100%;background-color: #f6f7f8;">
+        <nav class="company-brand with-title p-3 d-flex justify-content-between" style="background-color: white;
+        box-shadow: 0px 4px 8px rgb(0 0 0/10%);
+        z-index: 10;">
+            <a class="logo-container pl-3" href="https://neuronworks.co.id">                            
+                <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/logo/nw-horizontal.png" alt="PT. Neuronworks Indonesia" style="width: 8rem;">
+            </a>            
+        </nav>
+        
+        <!-- Add 'rtl' class to set secondary layout -->
+        <!-- Secondary layout will set your login form on the right side of pages -->
+        <div class="recruitment " style="/* height: 100%; */">        
+            <div class="container-form mt-5 mb-5" id="container-form">
+                <div class="recruitment-form-dialog">
+                    <div>
+
+                        <div class="company-brand with-title d-flex justify-content-between mb-3" href="#">                            
+                            <div class="wrapper-image logo-container">
+                                <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/logo/logomark-sign.png" alt="Neuron 3.0" style="width: 7rem;"/>                            
+                            </div>
+                        </div>
+                        <!-- Horizontal logo direction was default view setting on neuron navbar-brand -->
+                        <!-- If there just a logo mark that used or uploaded, Please add 'with-title' class on 'navbar-brand' -->
+                        <!-- Navbar will be automatically show up company name that you was declaration on 'company-name' class -->
+                        
+                        <div class="form-description m-0 mb-3">
+                            <h3 class="title m-0">Form Rekrutasi</h3>
+                            <p class="caption">Isi data di bawah sesuai dengan identitas diri anda dan lowongan yang akan anda pilih</p>
+                        </div>
+                        <!-- Form -->
+                        <form id="recruitment-form">
+                            <input type="hidden" name="token" value="#">
+                            <div class="form-group">
+                                <label for="fullname" class="active">Fullname<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Masukkan nama" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="active">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Masukkan email" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="active">Nomor Telepon<span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" name="nomorhp" id="phone" placeholder="Masukkan nomor telepon" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="vacancy">Lowongan <span class="text-danger">*</span></label>
+                                <select class="form-control" name="lowongan" id="lowongan">
+                                    <option value="" disabled="" selected="">- Pilih Lowongan -</option>
+                                                                      </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="position">Posisi <span class="text-danger">*</span></label>
+                                <select class="form-control" required="" name="posisi" id="posisi">
+                                    <option value="" disabled="" selected="">- Pilih Posisi -</option>
+                                    <option value="#example1">Contoh Posisi #1</option>
+                                    <option value="#example2">Contoh Posisi #2</option>
+                                    <option value="#example3">Contoh Posisi #3</option>
+                                  </select>
+                            </div>
+                            <div id="loginAlert"></div>
+                            <div class="form-group">
+                                <button type="submit" id="loginBtn" class="btn btn-primary waves-effect waves-light">Kirim</button>
+                            </div>
+                        </form>
+                        <!-- End form -->
+                    </div>
+                </div>
+    
+                <div class="copyright-container">
+                    </div>
+                    <div class="copyright-label">
+                        <p class="to-bold">Powered by Neuron Application Frameworks</p>
+                        <address class="m-0">2023 - All right reserved.</address>
+                    </div>
+                </div>
