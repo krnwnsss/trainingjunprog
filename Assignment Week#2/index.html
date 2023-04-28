@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+    body {
+      text-align: center;
+    }
+  
+    .Title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .flex1 {
+      flex: 1;
+      margin-right: 10px; 
+    }
+  
+    .flex2 {
+      flex: 2;
+      margin-left: 10px; 
+    }
+  
+    .judul1 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .judul2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .cardpad {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5 {
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  
+    .card1 {
+      background-color: rgb(255, 192, 192);
+    }
+  
+    .card2 {
+      background-color: rgb(255, 192, 192);
+    }
+  
+    .card3 {
+      background-color: rgb(255, 192, 192);
+    }
+  
+    .card4 {
+      background-color: rgb(255, 192, 192);
+    }
+  
+    .card5 {
+      background-color: rgb(255, 192, 192);
+    }
+  
+    .Title1,
+    .Title2,
+    .Title3,
+    .Title4,
+    .Title5,
+    .Title6 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  </style>
+  
+
+</head>
+<body class="text-center">
+	<div class="Title">Dashboard Statistik Kinerja 2023</div>
+	<div class="flex-container">
+		<div class="flex1">
+			<div class="judul1">&#9716; Kinerja Produksi</div>
+			<div class="cardpad">
+				<div class="">
+					<div class="judul2">Daily</div>
+					<div class="grid">
+						<div class="card1">
+							<div class="card-body" style="color: black">1200 MWh</div>
+							<div class="Title1">Unit 1</div>
+						</div>
+						<div class="card2">
+							<div class="card-body" style="color: black">1230 MWh</div>
+							<div class="Title2">Unit 2</div>
+						</div>
+					</div>
+					<div class="card3">
+						<div class="card-body" style="color: black">1024 MWh</div>
+						<div class="Title3">Unit 3</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="cardpad">
+					<div class="judul2">Month to date</div>
+					<div class="Title4">103634 MWh</div>
+				</div>
+				<div class="cardpad">
+					<div class="judul2">Year to date</div>
+					<div class="Title4">1139974 MWh</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="flex2">
+			<div class="judul1">Pemeliharaan Sungai (trashbom 1)</div>
+
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Plastik</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">
+							76%</div>
+						<div class="Title6">pencapaian</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Eceng Gondok</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">34%</div>
+						<div class="Title6">pencapaian</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Lain-lain</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">56%</div>
+						<div class="Title6">pencapaian</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex2">
+			<div class="judul1">Pemeliharaan Sungai (trashbom 2)</div>
+
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Plastik</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">
+							90%</div>
+						<div class="Title6">pencapaian</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Eceng Gondok</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">50%</div>
+						<div class="Title6">pencapaian</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Lain-lain</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">2%</div>
+						<div class="Title6">pencapaian</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Title">Detail Produksi &#8594</div>
+	<div class="flex-container">
+		<div class="flex1">
+			<div class="judul1">&#9716; Kinerja Operasi (Availbility Factor)</div>
+			<div class="cardpad">
+				<div class="">
+					<div class="judul2">Daily</div>
+					<div class="grid">
+						<div class="card1">
+							<div class="card-body" style="color: black">1%</div>
+							<div class="Title1">Unit 1</div>
+						</div>
+						<div class="card2">
+							<div class="card-body" style="color: black">2%</div>
+							<div class="Title2">Unit 2</div>
+						</div>
+					</div>
+					<div class="card3">
+						<div class="card-body" style="color: black">3%</div>
+						<div class="Title3">Unit 3</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="cardpad">
+					<div class="judul2">Month to date</div>
+					<div class="Title4">70%</div>
+				</div>
+				<div class="cardpad">
+					<div class="judul2">Year to date</div>
+					<div class="Title4">73%</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="flex1">
+			<div class="judul1"> &#128256; Kondisi Hidrologi (Discharge)</div>
+			<div class="cardpad">
+				<div class="">
+					<div class="judul2">Daily</div>
+					<div class="grid">
+						<div class="card1">
+							<div class="card-body" style="color: black">55,00 (m3/s)</div>
+							<div class="Title1">Unit 1</div>
+						</div>
+						<div class="card2">
+							<div class="card-body" style="color: black">56,00 (m3/s)</div>
+							<div class="Title2">Unit 2</div>
+						</div>
+					</div>
+					<div class="card3">
+						<div class="card-body" style="color: black">55,5 (m3/s)</div>
+						<div class="Title3">Unit 3</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="cardpad">
+					<div class="judul2">Month to date</div>
+					<div class="Title4">45,56 (m3/s)</div>
+				</div>
+				<div class="cardpad">
+					<div class="judul2">Year to date</div>
+					<div class="Title4">58,76 (m3/s)</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="flex2">
+			<div class="judul1">Kondisi Hidrologi (Water Level)</div>
+
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Daily</div>
+					<div class="card3">
+						<div class="card-body" style="color: black">
+							903,50 m</div>
+						<div class="Title3">Total rata-rata</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Month to Date</div>
+					<div class="card5">
+						<div class="card-body" style="color: black">905,43 m</div>
+						<div class="Title5">rata-rata</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="cardpad3">
+				<div class="">
+					<div class="judul2">Year to Date</div>
+					<div class="card4">
+						<div class="card-body" style="color: black">903,9m</div>
+						<div class="Title6">rata-rata</div>
+
+					</div>
+				</div>
+			</div>
