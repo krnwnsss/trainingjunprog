@@ -1,0 +1,27 @@
+1. query data
+
+SELECT * FROM classicmodels.employees;
+
+2. sort data
+
+SELECT firstName FROM classicmodels.employees order by employeeNumber;
+
+3. where clause
+
+SELECT * FROM classicmodels.employees where officeCode=1;
+
+4. count
+
+SELECT count(orderDate) FROM classicmodels.orders;
+
+5. create index
+
+create index first_name on employees(firstName);
+
+6. index
+
+explain select * from employees where firstName = 'Bow';
+
+7. subquery
+
+SELECT * FROM classicmodels.payments WHERE amount = (SELECT max(amount) FROM payments);
