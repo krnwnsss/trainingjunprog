@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requirtment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <nav class="nav" white;="" box-shadow:="" 0px="" 4px="" 8px="" rgb(0="" z-index:="">
+            <a class="nav-item" href="https://neuronworks.co.id">
+                <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/logo/nw-horizontal.png" alt="PT. Neuronworks Indonesia" class="logo" /> </a>
+        </nav>
+        <div class="container">
+            <div class="form">
+                <div class="form-body">
+                    <div class="form-content">
+
+                        <div class="header" href="#">
+                            <div class="logo">
+                                <img src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/logo/logomark-sign.png" alt="Neuron 3.0" style="width: 7rem;"/>
+                            </div>
+                        </div>
+                        <div class="form-description">
+                            <h3 class="title">Form Rekrutasi</h3>
+                            <p class="caption">Isi data di bawah sesuai dengan identitas diri anda dan lowongan yang akan anda pilih</p>
+                        </div> 
+                        <form novalidate="novalidate">
+                            <input type="hidden" name="token" value="#" />
+                            <div class="form-group">
+                                <label for="fullname" class="active">Fullname<span class="text-danger">*</span></label> <input type="text" class="form-control" name="fullname" placeholder="Masukkan nama" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="active">Email <span class="text-danger">*</span></label> <input type="email" class="form-control" name="email" placeholder="Masukkan email" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="active">Phone Number<span class="text-danger">*</span></label> <input type="tel" class="form-control" name="nomorhp" placeholder="Masukkan nomor telepon" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="vacancy" class="active">Vacancy <span class="text-danger">*</span></label> <select class="form-control" name="lowongan">
+                                    <option value="" disabled="" selected="">- Pilih Lowongan -</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="position" class="active">Position <span class="text-danger">*</span></label> <select class="form-control" required="" name="posisi">
+                                    <option value="" disabled="" selected="">- Pilih Posisi -</option>
+                                </select>
+                            </div>
+                            <div class="form-group"></div>
+                            <div class="form-group">
+                                <button type="submit" class="btn-primary">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+  // Sumber opsi untuk pilihan lowongan
+  var lowonganOptions = [
+    { value: 'DATABASE DEVELOPER', label: 'DATABASE DEVELOPER' },
+    { value: 'SYSTEM ADMINISTRATION', label: 'SYSTEM ADMINISTRATION' },
+    { value: 'WEB DEVELOPER', label: 'WEB DEVELOPER' },
+    { value: 'MOBILE DEVELOPER', label: 'MOBILE DEVELOPER' }
+  ];
+
+  // Mengisi pilihan lowongan menggunakan sumber opsi array
+  var lowonganSelect = $('select[name="lowongan"]');
+  $.each(lowonganOptions, function(index, option) {
+    lowonganSelect.append('<option value="' + option.value + '">' + option.label + '</option>');
+  });
+
+  // Sumber opsi untuk pilihan posisi
+  var posisiOptions = {
+    'DATABASE DEVELOPER': [
+      { value: 'Database Administrator', label: 'Database Administrator' },
+      { value: 'Database Engineer', label: 'Database Engineer' }
+    ],
+    'SYSTEM ADMINISTRATION': [
+      { value: 'System Administrator', label: 'System Administrator' },
+      { value: 'Network Administrator', label: 'Network Administrator' }
+    ],
+    'WEB DEVELOPER': [
+      { value: 'Front-end Developer', label: 'Front-end Developer' },
+      { value: 'Back-end Developer', label: 'Back-end Developer' }
+    ],
+    'MOBILE DEVELOPER': [
+      { value: 'Android Developer', label: 'Android Developer' },
+      { value: 'iOS Developer', label: 'iOS Developer' }
+    ]
+  };
+
+  // Mengambil elemen select untuk posisi
+  var posisiSelect = $('select[name="posisi"]');
+
+  // Ketika pilihan lowongan berubah, isi ulang opsi posisi
+  lowonganSelect.change(function() {
+    var lowonganValue = $(this).val();
+    posisiSelect.empty().append('<option value="" disabled="" selected="">- Pilih Posisi -</option>');
+
+    if (posisiOptions[lowonganValue]) {
+      $.each(posisiOptions[lowonganValue], function(index, option) {
+        posisiSelect.append('<option value="' + option.value + '">' + option.label + '</option>');
+      });
+    }
+  });
+
+  // Mengambil form dan menangani pengiriman data
+  var form = $('form');
+  form.submit(function(event) {
+    event.preventDefault();
+
+    // Mendapatkan nilai dari input
+    var fullname = $('input[name="fullname"]').val();
+    var email = $('input[name="email"]').val();
+    var nomorhp = $('input[name="nomorhp"]').val();
+    var lowongan = $('select[name="lowongan"]').val();
+    var posisi = $('select[name="posisi"]').val();
+
+    // Memeriksa apakah semua field telah diisi
+    if (fullname && email && nomorhp && lowongan && posisi) {
+      // Menampilkan hasil isian pada form
+      var hasilIsian = 'Nama: ' + fullname + '<br>' +
+                       'Email: ' + email + '<br>' +
+                       'Nomor Telepon: ' + nomorhp + '<br>' +
+                       'Lowongan: ' + lowongan + '<br>' +
+                       'Posisi: ' + posisi;
+
+      $('.form-content').html('<div class="success-message">' +
+                               '<h3>Terima kasih telah mengirimkan form rekrutasi!</h3>' +
+                               '<p>Berikut adalah hasil isian Anda:</p>' +
+                               '<div class="hasil-isian">' +
+                               hasilIsian +
+                               '</div>' +
+                               '</div>');
+    } else {
+      alert('Mohon lengkapi semua field yang tersedia.');
+    }
+  });
+});
+    </script>
+</body>
+</html>
